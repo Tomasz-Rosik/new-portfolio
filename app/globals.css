@@ -1,3 +1,142 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: rgb(4, 0, 17);
+}
+
+.ellips4 {
+  position: absolute;
+  width: 1100px;
+  height: 900px;
+  right: 8%;
+  top: 3%;
+  background: #29004d38;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+}
+
+.ellips3 {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  right: 19%;
+  top: 19%;
+  background: #6ea3863b;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+}
+
+.ellips2 {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  right: 18%;
+  top: 35%;
+  background: #2092b554;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+
+  @media (max-width: 500px) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.ellips1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: 25%;
+  top: 47%;
+  background: #bae555b8;
+  filter: blur(60px);
+  transform: rotate(-60deg);
+
+  @media (max-width: 500px) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.aboutMeBg {
+  background: rgb(8, 0, 37);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(19, 2, 73, 0.1) 42%,
+    rgba(19, 2, 73, 0.2) 43%,
+    rgba(19, 2, 73, 0.3) 44%,
+    rgba(19, 2, 73, 0.4) 45%,
+    rgba(19, 2, 73, 0.5) 46%,
+    rgba(19, 2, 73, 0.6) 47%,
+    rgba(19, 2, 73, 0.7) 48%,
+    rgb(19, 2, 73, 0.9) 49%,
+    rgb(19, 2, 73) 50%,
+    rgb(19, 2, 73) 70%
+  );
+}
+
+.blob {
+  position: absolute;
+  opacity: 0.5;
+  width: 400px;
+  aspect-ratio: 1/1;
+  animation: animateBlob 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards;
+  filter: blur(40px);
+  /* z-index: -1; */
+  background: linear-gradient(
+    47deg,
+    rgba(255, 88, 139, 1) 21%,
+    rgb(0 164 173) 67%,
+    rgba(118, 74, 166, 1) 81%
+  );
+
+  /*  Optional  */
+  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f; */
+}
+
+@keyframes animateBlob {
+  0% {
+    translate: 40% -25%;
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  50% {
+    translate: 0% 13%;
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  100% {
+    translate: -45% 39%;
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+}
+
+.glassCard {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 62px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

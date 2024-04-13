@@ -1,9 +1,7 @@
-import Image from 'next/image';
+import { useSplineContext } from '@/context/SplineContext';
 
 export default function Home() {
-  return (
-    <main>
-      <h1>Portfolio</h1>
-    </main>
-  );
+  // const { splineRef } = useSplineContext();
+
+  return <main className='w-1/4 relative h-screen'></main>;
 }
