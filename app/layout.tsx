@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import BgGradient from '@/components/BgGradient';
+import LayoutBgEffect from '@/components/LayoutBgEffect';
 import { SplineContextProvider } from '@/context/SplineContext';
 import SplineScene from '@/components/SplineScene/SplineScene';
 
@@ -21,8 +21,8 @@ export default function RootLayout({
     <SplineContextProvider>
       <html lang='en'>
         <body className={inter.className}>
-          <main className='w-screen h-screen relative'>
-            <BgGradient />
+          <main className='w-full h-screen relative'>
+            <LayoutBgEffect />
             <SplineScene />
             {children}
           </main>

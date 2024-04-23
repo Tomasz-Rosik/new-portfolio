@@ -3,78 +3,41 @@
 @tailwind utilities;
 
 body {
-  background: rgb(4, 0, 17);
+  background: #040011;
 }
 
-.ellips4 {
-  position: absolute;
-  width: 1100px;
-  height: 900px;
-  right: 8%;
-  top: 3%;
-  background: #29004d38;
-  filter: blur(125px);
-  transform: rotate(-60deg);
-}
-
-.ellips3 {
-  position: absolute;
-  width: 800px;
-  height: 600px;
-  right: 19%;
-  top: 19%;
-  background: #6ea3863b;
-  filter: blur(125px);
-  transform: rotate(-60deg);
-}
-
-.ellips2 {
-  position: absolute;
-  width: 500px;
-  height: 400px;
-  right: 18%;
-  top: 35%;
-  background: #2092b554;
-  filter: blur(125px);
-  transform: rotate(-60deg);
-
-  @media (max-width: 500px) {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-.ellips1 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  right: 25%;
-  top: 47%;
-  background: #bae555b8;
-  filter: blur(60px);
-  transform: rotate(-60deg);
-
-  @media (max-width: 500px) {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-.aboutMeBg {
-  background: rgb(8, 0, 37);
+.left-side-half-width-gradient {
+  background: rgb(4, 0, 20);
   background: linear-gradient(
     270deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(19, 2, 73, 0.1) 42%,
-    rgba(19, 2, 73, 0.2) 43%,
-    rgba(19, 2, 73, 0.3) 44%,
-    rgba(19, 2, 73, 0.4) 45%,
-    rgba(19, 2, 73, 0.5) 46%,
-    rgba(19, 2, 73, 0.6) 47%,
-    rgba(19, 2, 73, 0.7) 48%,
-    rgb(19, 2, 73, 0.9) 49%,
-    rgb(19, 2, 73) 50%,
-    rgb(19, 2, 73) 70%
+    rgba(4, 0, 20, 0.1) 42%,
+    rgba(4, 0, 20, 0.2) 43%,
+    rgba(4, 0, 20, 0.3) 44%,
+    rgba(4, 0, 20, 0.4) 45%,
+    rgba(4, 0, 20, 0.5) 46%,
+    rgba(4, 0, 20, 0.6) 47%,
+    rgba(4, 0, 20, 0.7) 48%,
+    rgb(4, 0, 20, 0.9) 49%,
+    rgb(4, 0, 20) 50%,
+    rgb(4, 0, 20) 70%
+  );
+}
+.right-side-half-width-gradient {
+  background: rgb(4, 0, 20);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(4, 0, 20, 0.1) 42%,
+    rgba(4, 0, 20, 0.2) 43%,
+    rgba(4, 0, 20, 0.3) 44%,
+    rgba(4, 0, 20, 0.4) 45%,
+    rgba(4, 0, 20, 0.5) 46%,
+    rgba(4, 0, 20, 0.6) 47%,
+    rgba(4, 0, 20, 0.7) 48%,
+    rgb(4, 0, 20, 0.9) 49%,
+    rgb(4, 0, 20) 50%,
+    rgb(4, 0, 20) 70%
   );
 }
 
@@ -86,17 +49,12 @@ body {
   animation: animateBlob 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
     alternate forwards;
   filter: blur(40px);
-  /* z-index: -1; */
   background: linear-gradient(
     47deg,
     rgba(255, 88, 139, 1) 21%,
     rgb(0 164 173) 67%,
     rgba(118, 74, 166, 1) 81%
   );
-
-  /*  Optional  */
-  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
-    inset 100px 100px 17px 0px #66319f; */
 }
 
 @keyframes animateBlob {
@@ -118,25 +76,144 @@ body {
   }
 }
 
-.glassCard {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.9px);
-  -webkit-backdrop-filter: blur(7.9px);
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
+.project-glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.skill-glass-chip {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+li {
+  list-style-type: disc;
+  padding-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+/* font-size: 56px */
 h1 {
-  font-size: 56px;
-  line-height: 62px;
-  font-weight: 800;
-  letter-spacing: 3px;
+  font-size: 3.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
+/* font-size: 48px */
+h2 {
+  font-size: 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+}
+/* font-size: 40px */
+h3 {
+  font-size: 2.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+/* font-size: 24px */
+h4 {
+  font-size: 1.5rem;
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+/* font-size: 20px */
+h5 {
+  font-size: 1.25rem;
+  line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+/* font-size: 16px */
 p {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.gridParent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'test test test test1'
+    'test test test test1'
+    'test3 test3 test2 test2';
+  transition: all ease 500ms;
+}
+
+.gridChild0 {
+  grid-area: test;
+}
+
+.gridChild1 {
+  grid-area: test1;
+}
+
+.gridChild2 {
+  grid-area: test2;
+}
+
+.gridChild3 {
+  grid-area: test3;
 }
