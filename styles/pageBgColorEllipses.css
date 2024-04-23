@@ -1,0 +1,43 @@
+.page-bg-ellips-1 {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 10%;
+  top: 10%;
+  background: #004d1a98;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+}
+
+.page-bg-ellips-2 {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  right: 19%;
+  top: 19%;
+  background: #ffaf0373;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+}
+
+.page-bg-ellips-3 {
+  position: absolute;
+  width: 400px;
+  height: 700px;
+  right: 32%;
+  top: 24%;
+  background: #1eb1dd86;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+}
+
+.page-bg-ellips-4 {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  left: 19%;
+  bottom: 10%;
+  background: #ff03648c;
+  filter: blur(125px);
+  transform: rotate(-60deg);
+}
