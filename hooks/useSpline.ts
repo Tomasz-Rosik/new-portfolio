@@ -1,16 +1,21 @@
 import { useSplineContext } from '@/context/SplineContext';
-import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { SplineEvent } from '@splinetool/react-spline';
 import type { Application } from '@splinetool/runtime';
+import { useState } from 'react';
 
 const useSpline = () => {
   const { splineRef } = useSplineContext();
   const router = useRouter();
   const pathname = usePathname();
+  const [loading, setLoading] = useState(true);
 
   function onLoad(splineApp: Application) {
     splineRef.current = splineApp;
+
+    if (splineRef.current.findObjectByName('main-camera')) {
+      setLoading(false);
+    }
 
     if (pathname === '/about-me') {
       splineRef.current.emitEvent('mouseDown', 'aboutMeView');
@@ -45,7 +50,7 @@ const useSpline = () => {
     }
   }
 
-  return { onLoad, onMouseDown };
+  return { onLoad, onMouseDown, loading };
 };
 
 export default useSpline;
